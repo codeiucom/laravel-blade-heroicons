@@ -1,0 +1,33 @@
+{
+    "name": "codeiucom/laravel-blade-heroicons",
+    "description": "CodeIU Laravel Blade HeroIcons Directive",
+    "type": "framework",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "unknown",
+            "email": "mail@codeiu.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeIU\\LaravelBladeHeroIcons\\": "src\\"
+        },
+        "files": [
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CodeIU\\LaravelBladeHeroIcons\\HeroIconServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

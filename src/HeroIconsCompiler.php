@@ -17,9 +17,9 @@ class HeroIconsCompiler extends ComponentTagCompiler
         $tmpClasses = config('codeiu-laravel-blade-heroicons.default-classes');
         if (!empty($tmpClasses)) {
             $tmpArr = explode(' ', $tmpClasses);
-            foreach ($tmpArr AS $val) {
+            foreach ($tmpArr as $val) {
                 $tmpKey = preg_replace('/-[0-9.\/]+$/', '-', $val);
-                $this->defaultClass[$tmpKey]= $val;
+                $this->defaultClass[$tmpKey] = $val;
             }
         }
 
@@ -166,7 +166,7 @@ class HeroIconsCompiler extends ComponentTagCompiler
         $tmpClass = trim($tmpClass, '"\'');
         if (!empty($this->defaultClass)) {
             foreach ($this->defaultClass as $key => $val) {
-                if (!preg_match('/\b'.$key.'/', $tmpClass)) {
+                if (!preg_match('/\b' . $key . '/', $tmpClass)) {
                     $tmpClass .= ' ' . $val;
                 }
             }
@@ -193,7 +193,7 @@ class HeroIconsCompiler extends ComponentTagCompiler
     protected function compileStatements($value)
     {
         return preg_replace_callback(
-            '/\B@(@?heroicons-[a-z-]+)(\( ( (?>[^()]+) | (?2) )* \))?/x', function ($match) {
+            '/\B@(@?' . $this->directive . '-[a-z-]+)(\( ( (?>[^()]+) | (?2) )* \))?/x', function ($match) {
             return $this->compileStatement($match);
         }, $value
         );

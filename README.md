@@ -1,5 +1,8 @@
 # Laravel Blade HeroIcons Directives
 
+more svg icons:  
+https://github.com/codeiucom/laravel-blade-svg-icons
+
 ## install
 
 ```
